@@ -8,9 +8,14 @@ body {
     display: block;
     margin-left: auto;
     margin-right: auto;
-    width: 50%;
+    width: 60%;
 }
-#fundo_laranja {
+.explicacao_geometria {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.fundo_laranja {
     background-color: #ffde59;
     width: 100%;
     height: auto;
@@ -22,7 +27,7 @@ body {
     left: 0px;
 }
 
-#fundo_bege {
+.fundo_bege_titulo {
     background-color: #eadfb4;
     width: 20%;
     height: auto;
@@ -31,8 +36,29 @@ body {
     padding: 0%;
     text-align: center;
     border: 0%;
-    margin:auto;
+    margin: auto
 }
+
+.fundo_bege_sub {
+    background-color: #eadfb4;
+    width: 20%;
+    height: auto;
+    font-size: 80%;
+    border-radius: 30px;
+    padding: 0%;
+    text-align: center;
+    border: 0%;
+    margin-left: auto;
+    margin-right: 5%;
+}
+
+.geometria_plana {
+    display: flex;
+    justify-content: center;
+    height: auto;
+    width: 100%;
+}
+
 div.formas_inicio {
     width: 100%;
     overflow: auto;
