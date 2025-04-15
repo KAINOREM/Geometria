@@ -41,3 +41,13 @@ const mobileNavbar = new MobileNavbar(
 );
 
 mobileNavbar.init();
+
+let acerto;
+let total;
+
+function resposta_correta() {
+    alert("Você Acertou");
+}
+function resposta_errada() {
+    alert("Você errou");
+}

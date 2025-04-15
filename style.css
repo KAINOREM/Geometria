@@ -126,7 +126,18 @@ body {
     width: 100%;
     height: auto;
     font-size: 150%;
-    padding: 0%;
+    padding: 0.5%;
+    text-align: center;
+    border: 0%;
+    left: 0px;
+}
+
+.fundo_bege {
+    background-color: #eadfb4;
+    width: 100%;
+    height: auto;
+    font-size: 250%;
+    padding: 0.5%;
     text-align: center;
     border: 0%;
     left: 0px;
@@ -141,7 +152,8 @@ body {
     padding: 0%;
     text-align: center;
     border: 0%;
-    margin: auto
+    margin: auto;
+    background-color: transparent;
 }
 
 .fundo_bege_sub {
