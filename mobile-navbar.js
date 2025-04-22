@@ -42,12 +42,28 @@ const mobileNavbar = new MobileNavbar(
 
 mobileNavbar.init();
 
-let acerto;
-let total;
+let resposta_opcao = 0;
+let resetar_cor = 1;
 
-function resposta_correta() {
-    alert("Você Acertou");
+function resposta(elemento) {
+    if(resposta_opcao != 0) {
+        document.getElementById(resposta_opcao).style.background='#eadfb4';
+    }
+    resposta_opcao = elemento.id;
+    document.getElementById("certa").style.background='#eadfb4';
+    document.getElementById(resetar_cor).style.background='#eadfb4';
+    document.getElementById(resposta_opcao).style.background='#afeeee';
 }
-function resposta_errada() {
-    alert("Você errou");
+
+function confirmar() {
+    if(resposta_opcao == "certa") {
+        document.getElementById("certa").style.background='#2CFF05';
+    } else if(resposta_opcao != 0) {
+        document.getElementById("certa").style.background='#2CFF05';
+        document.getElementById(resposta_opcao).style.background='red';
+        resetar_cor = resposta_opcao;
+    }
+    else {
+        alert("Selecione uma resposta");
+    }
 }
