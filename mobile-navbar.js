@@ -43,27 +43,32 @@ const mobileNavbar = new MobileNavbar(
 mobileNavbar.init();
 
 let resposta_opcao = 0;
-let resetar_cor = 1;
+let resposta_certa = 90;
 
 function resposta(elemento) {
     if(resposta_opcao != 0) {
         document.getElementById(resposta_opcao).style.background='#eadfb4';
+    } 
+    if (resposta_certa != 90) {
+        document.getElementById(resposta_certa).style.background='#eadfb4';
     }
     resposta_opcao = elemento.id;
-    document.getElementById("certa").style.background='#eadfb4';
-    document.getElementById(resetar_cor).style.background='#eadfb4';
+    if (resposta_opcao.includes(".4") == true) {
+        resposta_certa = resposta_opcao;
+    }
     document.getElementById(resposta_opcao).style.background='#afeeee';
 }
 
 function confirmar() {
-    if(resposta_opcao == "certa") {
-        document.getElementById("certa").style.background='#2CFF05';
+    if(resposta_certa == resposta_opcao) {
+        document.getElementById(resposta_certa).style.background='#2CFF05';
+        
     } else if(resposta_opcao != 0) {
-        document.getElementById("certa").style.background='#2CFF05';
         document.getElementById(resposta_opcao).style.background='red';
-        resetar_cor = resposta_opcao;
+        alert("Você errou, mas está quase lá! Continue tentando.");
+
     }
     else {
-        alert("Selecione uma resposta");
+        alert("Selecione uma resposta.");
     }
 }
