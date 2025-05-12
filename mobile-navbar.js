@@ -74,6 +74,7 @@ function confirmar() {
 }
 
 let dica_t = 5;
+let dica_c = 5;
 
 function dica_triangulo(elemento) {
     dica_t -= 1;
@@ -87,6 +88,21 @@ function dica_triangulo(elemento) {
             case "triangulo_m":
                 alert("A fórmula da área do triângulo é Área = (Base x Altura) dividido por 2");
                 alert("Você tem " + dica_t + " dicas restantes")
+                break
+        }
+    } else {
+        alert("Você não tem mais dicas disponíveis");
+    }
+}
+
+function dica_circulo(elemento) {
+    dica_c -= 1;
+    if (dica_c >= 0) {
+        switch (elemento.id) {
+            case "circulo_m":
+                alert("A fórmula do perímetro do círculo é Perímetro = 2 x π x RAIO");
+                alert("Ou Perímetro = 2 x 3 x RAIO");
+                alert("Você tem " + dica_c + " dicas restantes")
                 break
         }
     } else {
