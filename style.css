@@ -368,16 +368,19 @@ div.formas_inicio img {
 
 /* Botão de Chamada */
 #openModalBtn {
-    background-color: #4285f4;
-    color: white;
+    background-color: #ffde59;
+    color: black;
     border: none;
     padding: 12px 25px;
-    font-size: 44px;
-    border-radius: 6px;
+    font-size: 300%;
+    border-radius: 10px;
     cursor: pointer;
     transition: 0.3s;
     margin: 20px;
-    margin-left: 39%;
+    margin-left: 40.3%;
+    height: auto;
+    text-align: center;
+    font-weight: bold;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 }
 
