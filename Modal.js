@@ -23,19 +23,19 @@ btn.addEventListener('click', function () {
 
     // Atualizar mensagem de feedback
     if (porcentagem >= 90) {
-        feedbackMessage.textContent = "Excelente! Você arrasou! 🎉";
+        feedbackMessage.textContent = "Excelente! Você arrasou! 🏆";
         feedbackMessage.style.backgroundColor = "#e8f5e9";
         feedbackMessage.style.color = "#2e7d32";
     } else if (porcentagem >= 70) {
-        feedbackMessage.textContent = "Muito bom! Você mandou bem! 👍";
+        feedbackMessage.textContent = "Muito bom! Você mandou bem! 🥇";
         feedbackMessage.style.backgroundColor = "#e3f2fd";
         feedbackMessage.style.color = "#1565c0";
     } else if (porcentagem >= 50) {
-        feedbackMessage.textContent = "Bom trabalho! Continue assim! 💪";
+        feedbackMessage.textContent = "Bom trabalho! Continue assim! 🥈";
         feedbackMessage.style.backgroundColor = "#fff8e1";
         feedbackMessage.style.color = "#ff8f00";
     } else {
-        feedbackMessage.textContent = "Continue praticando! Você consegue! ✨";
+        feedbackMessage.textContent = "Continue praticando! Você consegue! 🥉";
         feedbackMessage.style.backgroundColor = "#ffebee";
         feedbackMessage.style.color = "#c62828";
     }
