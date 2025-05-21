@@ -241,8 +241,21 @@ div.formas_inicio img {
     background-color: rgba(0, 0, 0, 0.7);
 }
 
+
 .modal-content {
     background-color: #f8f9fa;
+    margin: 10% auto;
+    padding: 25px;
+    border: none;
+    width: 90%;
+    max-width: 500px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    animation: modalopen 0.4s;
+}
+
+.modal-content-2 {
+    background-color: #eadfb4;
     margin: 10% auto;
     padding: 25px;
     border: none;

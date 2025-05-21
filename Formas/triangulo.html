@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Triângulo</title>
     <link rel="stylesheet" href="../style.css">
-    <script src="../script.js"></script>
     <script src="../mobile-navbar.js"></script>
 
 </head>
@@ -686,7 +685,27 @@
             <p id="feedbackMessage"></p>
         </div>
     </div>
-    <script src="../modal.js"></script>
+
+        <!-- Modal genérico para dicas -->
+        <div id="modalDica" class="modal">
+            <div class="modal-content-2">
+                <span class="close">&times;</span>
+                <img id="imagemDica" src="" style="max-width: 100%;">
+            </div>
+        </div>
+
+        <!-- Modal para resposta -->
+        <div id="modalResposta" class="modal">
+            <div class="modal-content-2">
+                <span class="close">&times;</span>
+                <h2 id="tituloResposta" style="text-align: center;"></h2>
+                <img id="imagemResposta" src="" style="max-width: 100%;">
+                <p id="textoResposta" style="text-align: center;"></p>
+            </div>
+        </div>
+
+        <script src="../modal.js"></script>
+        <script src="../script.js"></script>
 </body>
 
 </html>

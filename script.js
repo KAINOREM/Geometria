@@ -4,6 +4,33 @@ let respostas = [];
 let acertos = 0;
 
 
+const modalDica = document.getElementById("modalDica");
+const modalResposta = document.getElementById("modalResposta");
+const imagemDica = document.getElementById("imagemDica");
+const tituloResposta = document.getElementById("tituloResposta");
+const textoResposta = document.getElementById("textoResposta");
+const closeButtons = document.querySelectorAll(".close");
+const imagemResposta = document.getElementById("imagemResposta");
+
+// Configuração das dicas (imagem por ID)
+const dicasConfig = {
+    "triangulo_f": "/Imagens/dica_geral.png",
+    "retangulo_m_perimetro": "/imagens/dica_retangulo_m_perimetro.png",
+    // Adicione outras dicas aqui
+};
+
+// Configurar eventos para todas as dicas
+document.querySelectorAll('.dica').forEach(dica => {
+    dica.addEventListener('click', function() {
+        const dicaId = this.id;
+        if (dicasConfig[dicaId]) {
+            imagemDica.src = dicasConfig[dicaId];
+            modalDica.style.display = "block";
+        }
+    });
+});
+
+// Sua função resposta atualizada
 function resposta(elemento) {
     if (resposta_opcao != 0) {
         document.getElementById(resposta_opcao).style.background = '#eadfb4';
@@ -11,68 +38,66 @@ function resposta(elemento) {
     if (resposta_certa != 90) {
         document.getElementById(resposta_certa).style.background = '#eadfb4';
     }
+    
     resposta_opcao = elemento.id;
+    
+    // Verifica se é a resposta correta (.4 no ID)
     if (resposta_opcao.includes(".4") == true) {
         resposta_certa = resposta_opcao;
         if (respostas.includes(resposta_opcao) == false) {
             respostas.push(resposta_opcao);
-            acertos += 1
-       }
+            acertos += 1;
+        }
     }
+    
     document.getElementById(resposta_opcao).style.background = '#afeeee';
 }
 
+// Sua função confirmar atualizada com modal
 function confirmar() {
     if (resposta_certa == resposta_opcao) {
         document.getElementById(resposta_certa).style.background = '#2CFF05';
-
+        tituloResposta.textContent = "Parabéns!";
+        imagemResposta.src = "/Imagens/parabens_geral.png"
+        textoResposta.textContent = "Você é incrivel!";
+        modalResposta.style.display = "block";
+        
     } else if (resposta_opcao != 0) {
         document.getElementById(resposta_opcao).style.background = 'red';
-        alert("Você errou, mas está quase lá! Continue tentando.");
-
-    }
-    else {
-        alert("Selecione uma resposta.");
+        tituloResposta.textContent = "Ainda não chegamos na resposta certa!";
+        imagemResposta.src = "/Imagens/estaquasela_geral.png"
+        textoResposta.textContent = "Tente novamente, você está quase lá!";
+        modalResposta.style.display = "block";
+        
+    } else {
+        tituloResposta.textContent = "Atenção";
+        textoResposta.textContent = "Por favor, selecione uma resposta.";
+        modalResposta.style.display = "block";
     }
 }
+
+// Fechar modais (mantido igual)
+closeButtons.forEach(button => {
+    button.addEventListener('click', function() {
+        this.closest('.modal').style.display = 'none';
+    });
+});
+
+window.addEventListener('click', function(event) {
+    if (event.target.classList.contains('modal')) {
+        event.target.style.display = 'none';
+    }
+});
+
+document.addEventListener('keydown', function(event) {
+    if (event.key === "Escape") {
+        document.querySelectorAll('.modal').forEach(modal => {
+            modal.style.display = 'none';
+        });
+    }
+});
 
 function resultado(elemento) {
     alert ("Você acertou " + acertos + "/" + elemento.id)
 }
 
-let dica_t = 5;
-let dica_c = 5;
-
-function dica_triangulo(elemento) {
-    dica_t -= 1;
-    if (dica_t >= 0) {
-        switch (elemento.id) {
-            case "triangulo_f":
-                alert("Tente somar os lados que você já sabe o valor e veja quanto falta para 180.");
-                alert("Você tem " + dica_t + " dicas restantes")
-                break
-
-            case "triangulo_m":
-                alert("A fórmula da área do triângulo é Área = (Base x Altura) dividido por 2");
-                alert("Você tem " + dica_t + " dicas restantes")
-                break
-        }
-    } else {
-        alert("Você não tem mais dicas disponíveis");
-    }
-}
-
-function dica_circulo(elemento) {
-    dica_c -= 1;
-    if (dica_c >= 0) {
-        switch (elemento.id) {
-            case "circulo_m":
-                alert("A fórmula do perímetro do círculo é Perímetro = 2 x π x RAIO");
-                alert("Ou Perímetro = 2 x 3 x RAIO");
-                alert("Você tem " + dica_c + " dicas restantes")
-                break
-        }
-    } else {
-        alert("Você não tem mais dicas disponíveis");
-    }
-}
