@@ -120,15 +120,15 @@ body {
 
 .center {
     display: block;
-    margin-left: auto;
-    margin-right: auto;
     width: 60%;
+    margin: 3% auto 3%; /* top: 0, left/right: auto, bottom: 2% */
 }
 
 .explicacao_geometria {
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-bottom: 2%;
 }
 
 .fundo_laranja {
@@ -140,6 +140,8 @@ body {
     text-align: center;
     border: 0%;
     left: 0px;
+    margin-top: 2%;
+    margin-bottom: 2%;
 }
 
 .fundo_bege {
@@ -151,6 +153,7 @@ body {
     text-align: center;
     border: 0%;
     left: 0px;
+    margin-bottom: 2%;
 }
 
 .fundo_bege_titulo {
@@ -163,6 +166,8 @@ body {
     text-align: center;
     border: 0%;
     margin: auto;
+    margin-top: 20px; 
+    margin-bottom: 2%;
 }
 
 .fundo_bege_sub {
@@ -176,6 +181,8 @@ body {
     border: 0%;
     margin-left: auto;
     margin-right: 5%;
+    margin-top: 10px; 
+    margin-bottom: 10px;
 }
 
 .geometria_plana {
@@ -183,25 +190,35 @@ body {
     justify-content: center;
     height: auto;
     width: 100%;
+    margin-bottom: 2%;
+}
+.geometria_plana img:hover {
+    transform: scale(1.05); /* Efeito de zoom suave ao passar o mouse */
 }
 
 div.formas_inicio {
     width: 100%;
-    overflow: auto;
-    padding: 0;
     display: flex;
-    justify-content: space-between;
+    flex-wrap: nowrap;  /* Garante que não haja quebra de linha */
+    justify-content: center;
+    padding: 20px 0;
+    gap: 20px;
 }
 
 div.formas_inicio div {
-    width: 32%;
-    padding: 0;
-    margin: 10px 0;
+    flex-shrink: 0;  /* Impede que os itens encolham */
+    width: auto;  /* Largura ajustável */
+    min-width: 150px;  /* Largura mínima */
 }
 
 div.formas_inicio img {
-    width: 80%;
-    height: 87%;
+    height: 250px;  /* Altura fixa */
+    width: auto;  /* Largura proporcional */
+    max-width: 100%;
+}
+
+div.formas_inicio img:hover {
+    transform: scale(1.05); /* Efeito de zoom suave ao passar o mouse */
 }
 
 .respostas_estilo {
@@ -215,7 +232,7 @@ div.formas_inicio img {
     text-align: left;
     border: 10%;
     margin: auto;
-    margin-top: 4px;
+    margin-top: 2px;
     border: solid 1px #23232e;
 }
 
@@ -227,6 +244,7 @@ div.formas_inicio img {
     padding-top: 2%; 
     padding-right: 2%;
     cursor: pointer;
+    margin-bottom: 2%;
 }
 
 .modal {
@@ -381,6 +399,8 @@ div.formas_inicio img {
 
 /* Botão de Chamada */
 #openModalBtn {
+    display: block;
+    margin: 20px auto;
     background-color: #ffde59;
     color: black;
     border: none;
@@ -389,8 +409,6 @@ div.formas_inicio img {
     border-radius: 10px;
     cursor: pointer;
     transition: 0.3s;
-    margin: 20px;
-    margin-left: 40.3%;
     height: auto;
     text-align: center;
     font-weight: bold;
