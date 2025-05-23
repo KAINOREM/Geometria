@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Losango</title>
     <link rel="stylesheet" href="../style.css">
+    <script src="../mobile-navbar.js"></script>
 </head>
 
 <body>
@@ -295,7 +296,8 @@
 
 
         <div class="fundo_laranja">
-            <h1><strong> O losango tem um lado de 8 cm e as diagonais com 16 cm e 20 cm. Qual é a área desse losango?</strong></h1>
+            <h1><strong> O losango tem um lado de 8 cm e as diagonais com 16 cm e 20 cm. Qual é a área desse
+                    losango?</strong></h1>
         </div>
 
         <img src="/Imagens/losango/losango_ex16.png" class="center" style="width: 25%;">
@@ -606,9 +608,64 @@
 
 
 
-
+        <button id="openModalBtn" data-total-questions="30">RESULTADOS</button>
     </main>
-    <script src="../mobile-navbar.js"></script>
+    <audio id="audio1" src="../Efeitos Sonoros/Som de acerto1.mp3" autostart="false"></audio>
+    <audio id="audio2" src="../Efeitos Sonoros/Som de acerto2.mp3" autostart="false"></audio>
+    <audio id="audio3" src="../Efeitos Sonoros/Som de acerto3.mp3" autostart="false"></audio>
+    <audio id="audio4" src="../Efeitos Sonoros/Especial.mp3" autostart="false"></audio>
+    <!-- Modal de Resultados -->
+    <div id="myModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2 style="text-align: center; color: #333;">Seu Desempenho</h2>
+
+            <div class="result-container">
+                <div class="result correct">
+                    <span class="result-label">Acertos:</span>
+                    <span id="correctCount" class="result-value">0</span>
+                </div>
+
+                <div class="result wrong">
+                    <span class="result-label">Erros:</span>
+                    <span id="wrongCount" class="result-value">0</span>
+                </div>
+
+                <div class="result total">
+                    <span class="result-label">Total de Questões:</span>
+                    <span id="totalCount" class="result-value">0</span>
+                </div>
+            </div>
+
+            <div class="progress-container">
+                <div id="progressBar" class="progress-bar"></div>
+            </div>
+
+            <p id="feedbackMessage"></p>
+        </div>
+    </div>
+
+    <!-- Modal genérico para dicas -->
+    <div id="modalDica" class="modal">
+        <div class="modal-content-2">
+            <span class="close">&times;</span>
+            <img id="imagemDica" src="" style="max-width: 100%;">
+        </div>
+    </div>
+
+    <!-- Modal para resposta -->
+    <div id="modalResposta" class="modal">
+        <div class="modal-content-2">
+            <span class="close">&times;</span>
+            <h2 id="tituloResposta" style="text-align: center;"></h2>
+            <img id="imagemResposta" src="" style="max-width: 100%;">
+            <h2 id="textoResposta" style="text-align: center;">
+                </p>
+        </div>
+    </div>
+
+    <script src="../modal.js"></script>
+    <script src="../script.js"></script>
 </body>
 
 </html>
