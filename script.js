@@ -16,6 +16,7 @@ const imagemResposta = document.getElementById("imagemResposta");
 const dicasConfig = {
     "triangulo_m": "/Imagens/Triangulo/dica_triangulo_m.png",
     "retangulo_m_perimetro": "/imagens/Retangulo/dica_retangulo_m_perimetro.png",
+    "retangulo_m_area": "/imagens/Retangulo/dica_retangulo_m_area.png",
     "quadrado_m_perimetro": "/imagens/Quadrado/dica_quadrado_m_perimetro.png",
     "quadrado_a_perimetro": "/imagens/Quadrado/dica_quadrado_a_perimetro.png",
     // Adicione outras dicas aqui
