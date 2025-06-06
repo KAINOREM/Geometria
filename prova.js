@@ -9,20 +9,18 @@ const facil = {
   ]
 }
 
-const registro_f = [];
-const registro_m = [];
-const registro_d = [];
+const registro = [];
 
 for (let ex = 1; ex <= 10; ex++) {
-  if (ex <= 5) {
-    let aleatorio = Math.floor(Math.random() * 5);
+  if (ex <= 3) {
+    let aleatorio = Math.floor(Math.random() * 3);
     let loop = true;
 
     while (loop == true) {
-      if (registro_f.includes(aleatorio) == true) {
-        aleatorio = Math.floor(Math.random() * 5);
+      if (registro.includes(aleatorio) == true) {
+        aleatorio = Math.floor(Math.random() * 3);
       } else {
-        registro_f.push(aleatorio);
+        registro.push(aleatorio);
         loop = false;
       }
     }
@@ -33,7 +31,25 @@ for (let ex = 1; ex <= 10; ex++) {
     for (let num = 1; num <= 4; num++) {
       document.getElementById(ex + "." + num).innerHTML += facil.ex[aleatorio].resp[num - 1];
     }
-  } else if (ex <= 8) {
+  } else if (ex <= 5) {
+        let aleatorio = Math.floor(Math.random() * 2) + 3;
+    let loop = true;
+
+    while (loop == true) {
+      if (registro.includes(aleatorio) == true) {
+        aleatorio = Math.floor(Math.random() * 2) + 3;
+      } else {
+        registro.push(aleatorio);
+        loop = false;
+      }
+    }
+
+    document.getElementById("ex" + ex).innerHTML = facil.ex[aleatorio].titulo;
+    document.getElementById("imagem_ex" + ex).src = facil.ex[aleatorio].imagem;
+
+    for (let num = 1; num <= 4; num++) {
+      document.getElementById(ex + "." + num).innerHTML += facil.ex[aleatorio].resp[num - 1];
+    }
 
   } else if (ex <= 10) {
 
