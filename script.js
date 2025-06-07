@@ -47,10 +47,6 @@ function resposta(elemento) {
     // Verifica se é a resposta correta (.4 no ID)
     if (resposta_opcao.includes(".4") == true) {
         resposta_certa = resposta_opcao;
-        if (respostas.includes(resposta_opcao) == false) {
-            respostas.push(resposta_opcao);
-            acertos += 1;
-        }
     }
 
     document.getElementById(resposta_opcao).style.background = '#afeeee';
@@ -69,6 +65,11 @@ function confirmar() {
         imagemResposta.src = "/Imagens/parabens_geral.png"
         textoResposta.textContent = "Você é incrivel!";
         modalResposta.style.display = "block";
+
+        if (respostas.includes(resposta_opcao) == false) {
+            respostas.push(resposta_opcao);
+            acertos += 1;
+        }
 
         let aleatorio = Math.floor((Math.random() * 100) + 1);
 
