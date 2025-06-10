@@ -1,9 +1,9 @@
-const facil = {
+const exercicios = {
   ex: [
     /*Fáceis*/
-    { titulo: "Banana", imagem: "/Efeitos Sonoros/Especial imagem.jpg", resp: ["amarelo", "casca", "carboidratos", "Certo"] },
-    { titulo: "BMW", imagem: "/Efeitos Sonoros/Especial imagem.jpg", resp: ["320", "X3", "X5", "Certo"] },
-    { titulo: "Fiat", imagem: "/Efeitos Sonoros/Especial imagem.jpg", resp: ["500", "Panda", "De algum país", "Certo"] },
+    { titulo: "Quadrado", imagem: "/Efeitos Sonoros/Especial imagem.jpg", resp: ["amarelo", "casca", "carboidratos", "Certo"]},
+    { titulo: "Triangulo", imagem: "/Efeitos Sonoros/Especial imagem.jpg", resp: ["320", "X3", "X5", "Certo"]},
+    { titulo: "Fiat", imagem: "/Efeitos Sonoros/Especial imagem.jpg", resp: ["500", "Panda", "De algum país", "Certo"]},
     /*Difíceis*/
     { titulo: "duro", imagem: "/Efeitos Sonoros/Especial imagem.jpg", resp: ["mole", "medio", "molhado", "Certo"] },
     { titulo: "cavalos grandes", imagem: "/Efeitos Sonoros/Especial imagem.jpg", resp: ["boi", "cabra", "lebre", "Certo"] }
@@ -26,11 +26,12 @@ for (let ex = 1; ex <= 10; ex++) {
       }
     }
 
-    document.getElementById("ex" + ex).innerHTML = facil.ex[aleatorio].titulo;
-    document.getElementById("imagem_ex" + ex).src = facil.ex[aleatorio].imagem;
+    document.getElementById("ex" + ex).innerHTML = exercicios.ex[aleatorio].titulo;
+    document.getElementById("imagem_ex" + ex).src = exercicios.ex[aleatorio].imagem;
+
 
     for (let num = 1; num <= 4; num++) {
-      document.getElementById(ex + "." + num).innerHTML += facil.ex[aleatorio].resp[num - 1];
+      document.getElementById(ex + "." + num).innerHTML += exercicios.ex[aleatorio].resp[num - 1];
     }
   } else if (ex <= 5) {
     let aleatorio = Math.floor(Math.random() * 2) + 3;
@@ -45,11 +46,11 @@ for (let ex = 1; ex <= 10; ex++) {
       }
     }
 
-    document.getElementById("ex" + ex).innerHTML = facil.ex[aleatorio].titulo;
-    document.getElementById("imagem_ex" + ex).src = facil.ex[aleatorio].imagem;
+    document.getElementById("ex" + ex).innerHTML = exercicios.ex[aleatorio].titulo;
+    document.getElementById("imagem_ex" + ex).src = exercicios.ex[aleatorio].imagem;
 
     for (let num = 1; num <= 4; num++) {
-      document.getElementById(ex + "." + num).innerHTML += facil.ex[aleatorio].resp[num - 1];
+      document.getElementById(ex + "." + num).innerHTML += exercicios.ex[aleatorio].resp[num - 1];
     }
 
   } else if (ex <= 10) {
@@ -70,10 +71,10 @@ function resposta(elemento) {
 
   if (respostas.includes(resposta_opcao.slice(0, -1)) == true) {
 
-    resposta_opcao = elemento.id;
+    resposta_opcao = 0;
 
   } else {
-  document.getElementById(resposta_opcao).style.background = '#afeeee';
+    document.getElementById(resposta_opcao).style.background = '#afeeee';
   }
 }
 
@@ -81,10 +82,16 @@ function confirmar() {
   document.getElementById(resposta_opcao).style.background = '#a1dbdb';
   let cortada = resposta_opcao.slice(0, -1);
   respostas.push(cortada);
+
+  for (let num = 1; num <= 4; num++) {
+    if (cortada + num != resposta_opcao) {
+    document.getElementById(cortada + num).style.background = '#dbd1a7';
+    }
+  }
+
   if (resposta_opcao.includes(".4") == true) {
-    
     acertos += 1;
-    
+    exercicios.ex[aleatorio].titulo
   }
   resposta_opcao = 0
 }
