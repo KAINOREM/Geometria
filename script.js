@@ -18,7 +18,11 @@ const dicasConfig = {
     "retangulo_m_perimetro": "/imagens/Retangulo/dica_retangulo_m_perimetro.png",
     "retangulo_m_area": "/imagens/Retangulo/dica_retangulo_m_area.png",
     "quadrado_m_perimetro": "/imagens/Quadrado/dica_quadrado_m_perimetro.png",
-    "quadrado_a_perimetro": "/imagens/Quadrado/dica_quadrado_a_perimetro.png",
+    "quadrado_m_area": "/imagens/Quadrado/dica_quadrado_m_area.png",
+    "losango_m_perimetro": "/imagens/losango/dica_losango_m_perimetro.png",
+    "losango_m_area": "/imagens/losango/dica_losango_m_area.png",
+    "paralelogramo_m_perimetro": "/imagens/paralelogramo/dica_paralelogramo_m_perimetro.png",
+    "paralelogramo_m_area": "/imagens/paralelogramo/dica_paralelogramo_m_area.png",
     // Adicione outras dicas aqui
 };
 
