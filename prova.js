@@ -1,25 +1,50 @@
 const exercicios = {
   ex: [
-    /*Fáceis*/
-    { titulo: "Quadrado", imagem: "/Efeitos Sonoros/Especial imagem.jpg", resp: ["amarelo", "casca", "carboidratos", "Certo"]},
-    { titulo: "Triangulo", imagem: "/Efeitos Sonoros/Especial imagem.jpg", resp: ["320", "X3", "X5", "Certo"]},
-    { titulo: "Fiat", imagem: "/Efeitos Sonoros/Especial imagem.jpg", resp: ["500", "Panda", "De algum país", "Certo"]},
-    /*Difíceis*/
-    { titulo: "duro", imagem: "/Efeitos Sonoros/Especial imagem.jpg", resp: ["mole", "medio", "molhado", "Certo"] },
-    { titulo: "cavalos grandes", imagem: "/Efeitos Sonoros/Especial imagem.jpg", resp: ["boi", "cabra", "lebre", "Certo"] }
+    /*Fáceis*/ 
+//Paralelogramo
+{ titulo: "Quantos lados o paralelogramo tem?", imagem: "/Efeitos Sonoros/Especial imagem.jpg", resp: ["5", "6", "7", "4"]},
+
+{ titulo: "Qual dessas imagens é um paralelogramo?", imagem: "/Efeitos Sonoros/Especial imagem.jpg", resp: ["Vermelho", "Rosa", "Roxo", "Azul Escuro"]},
+
+{ titulo: "Qual parte da casa é um paralelogramo?", imagem: "/Efeitos Sonoros/Especial imagem.jpg", resp: ["Telhado", "janela", "Porta", "Parede"]},
+
+//Retângulo
+
+{ titulo: "Quantos Lados esse retângulo possui?", imagem: "/Efeitos Sonoros/Especial imagem.jpg", resp: [" 3", "6", "2", "4"]},
+
+{ titulo: "Qual o valor do ângulo que falta?", imagem: "/Efeitos Sonoros/Especial imagem.jpg", resp: [" 80°", "30°", "20°", "90°"]},
+
+{ titulo: "Qual dessas imagens tem um retângulo?", imagem: "/Efeitos Sonoros/Especial imagem.jpg", resp: [" Caixa", "Escalímetro", "Bola de Golfe", "Tv"]},
+
+//Quadrado
+
+{ titulo: "Quantos lados o quadrado possui?", imagem: "/Efeitos Sonoros/Especial imagem.jpg", resp: [" 3", "6", "2", "4"]},
+
+{ titulo: "Qual dessas imagens tem um quadrado?", imagem: "/Efeitos Sonoros/Especial imagem.jpg", resp: [" Bola de Golfe", "Escalímetro", "Banana", "Presente"]},
+
+{ titulo: "Qual o valor do ângulo que falta?", imagem: "/Efeitos Sonoros/Especial imagem.jpg", resp: [" 20°", "30°", "80°", "90°"]},
+
+//Triângulo
+
+{ titulo: "Qual forma geométrica apresenta 3 lados?", imagem: "/Efeitos Sonoros/Especial imagem.jpg", resp: [" Quadrado", "Círculo", "Trapézio", "Triângulo"]},
+
+{ titulo: "Qual valor falta para o resultado ser 180°??", imagem: "/Efeitos Sonoros/Especial imagem.jpg", resp: ["70°", "80°", "20°", "65°"]},
+
+{ titulo: "Qual dessas imagens tem um triângulo?", imagem: "/Efeitos Sonoros/Especial imagem.jpg", resp: ["Esfera", "Quadrado", "Borracha", "Melancia"]}
+
   ]
 }
 
 const registro = [];
 
 for (let ex = 1; ex <= 10; ex++) {
-  if (ex <= 3) {
-    let aleatorio = Math.floor(Math.random() * 3);
+  if (ex <= 5) {
+    let aleatorio = Math.floor(Math.random() * 6);
     let loop = true;
 
     while (loop == true) {
       if (registro.includes(aleatorio) == true) {
-        aleatorio = Math.floor(Math.random() * 3);
+        aleatorio = Math.floor(Math.random() * 6);
       } else {
         registro.push(aleatorio);
         loop = false;
@@ -33,13 +58,13 @@ for (let ex = 1; ex <= 10; ex++) {
     for (let num = 1; num <= 4; num++) {
       document.getElementById(ex + "." + num).innerHTML += exercicios.ex[aleatorio].resp[num - 1];
     }
-  } else if (ex <= 5) {
-    let aleatorio = Math.floor(Math.random() * 2) + 3;
+  } else if (ex <= 8) {
+    let aleatorio = Math.floor(Math.random() * 6) + 6;
     let loop = true;
 
     while (loop == true) {
       if (registro.includes(aleatorio) == true) {
-        aleatorio = Math.floor(Math.random() * 2) + 3;
+        aleatorio = Math.floor(Math.random() * 6) + 6;
       } else {
         registro.push(aleatorio);
         loop = false;
@@ -84,6 +109,7 @@ function confirmar() {
   respostas.push(cortada);
 
   for (let num = 1; num <= 4; num++) {
+    document.getElementById(cortada + "confirmar").style.backgroundColor = '#dbd1a7';
     if (cortada + num != resposta_opcao) {
     document.getElementById(cortada + num).style.background = '#dbd1a7';
     }
