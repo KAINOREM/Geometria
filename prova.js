@@ -1,37 +1,107 @@
 const exercicios = {
   ex: [
-    /*Fáceis*/ 
-//Paralelogramo
-{ titulo: "Quantos lados o paralelogramo tem?", imagem: "/Efeitos Sonoros/Especial imagem.jpg", resp: ["5", "6", "7", "4"]},
+    /*Fáceis*/
+    //Paralelogramo
+    { titulo: "Quantos lados o paralelogramo tem?", imagem:"../Imagens/Prova/PF_paralelogramo1.png", resp: ["5", "6", "7", "4"] },
 
-{ titulo: "Qual dessas imagens é um paralelogramo?", imagem: "/Efeitos Sonoros/Especial imagem.jpg", resp: ["Vermelho", "Rosa", "Roxo", "Azul Escuro"]},
+    { titulo: "Qual dessas imagens é um paralelogramo?", imagem:"../Imagens/Prova/PF_paralelogramo2.png", resp: ["Vermelho", "Rosa", "Roxo", "Azul Escuro"] },
 
-{ titulo: "Qual parte da casa é um paralelogramo?", imagem: "/Efeitos Sonoros/Especial imagem.jpg", resp: ["Telhado", "janela", "Porta", "Parede"]},
+    { titulo: "Qual parte da casa é um paralelogramo?", imagem:"../Imagens/Prova/PF_paralelogramo3.png", resp: ["Telhado", "janela", "Porta", "Parede"] },
 
-//Retângulo
+    //Retângulo
 
-{ titulo: "Quantos Lados esse retângulo possui?", imagem: "/Efeitos Sonoros/Especial imagem.jpg", resp: [" 3", "6", "2", "4"]},
+    { titulo: "Quantos Lados esse retângulo possui?", imagem:"../Imagens/Prova/PF_retangulo1.png", resp: ["3", "6", "2", "4"] },
 
-{ titulo: "Qual o valor do ângulo que falta?", imagem: "/Efeitos Sonoros/Especial imagem.jpg", resp: [" 80°", "30°", "20°", "90°"]},
+    { titulo: "Qual o valor do ângulo que falta?", imagem:"../Imagens/Prova/PF_retangulo2.png", resp: ["80°", "30°", "20°", "90°"] },
 
-{ titulo: "Qual dessas imagens tem um retângulo?", imagem: "/Efeitos Sonoros/Especial imagem.jpg", resp: [" Caixa", "Escalímetro", "Bola de Golfe", "Tv"]},
+    { titulo: "Qual dessas imagens tem um retângulo?", imagem:"../Imagens/Prova/PF_retangulo3.png", resp: ["Caixa", "Escalímetro", "Bola de Golfe", "Tv"] },
 
-//Quadrado
+    //Quadrado
 
-{ titulo: "Quantos lados o quadrado possui?", imagem: "/Efeitos Sonoros/Especial imagem.jpg", resp: [" 3", "6", "2", "4"]},
+    { titulo: "Quantos lados o quadrado possui?", imagem:"../Imagens/Prova/PF_quadrado1.png", resp: ["3", "6", "2", "4"] },
 
-{ titulo: "Qual dessas imagens tem um quadrado?", imagem: "/Efeitos Sonoros/Especial imagem.jpg", resp: [" Bola de Golfe", "Escalímetro", "Banana", "Presente"]},
+    { titulo: "Qual dessas imagens tem um quadrado?", imagem:"../Imagens/Prova/PF_quadrado2.png", resp: ["Bola de Golfe", "Escalímetro", "Banana", "Presente"] },
 
-{ titulo: "Qual o valor do ângulo que falta?", imagem: "/Efeitos Sonoros/Especial imagem.jpg", resp: [" 20°", "30°", "80°", "90°"]},
+    { titulo: "Qual o valor do ângulo que falta?", imagem:"../Imagens/Prova/PF_quadrado3.png", resp: ["20°", "30°", "80°", "90°"] },
 
-//Triângulo
+    //Triângulo
 
-{ titulo: "Qual forma geométrica apresenta 3 lados?", imagem: "/Efeitos Sonoros/Especial imagem.jpg", resp: [" Quadrado", "Círculo", "Trapézio", "Triângulo"]},
+    { titulo: "Qual forma geométrica apresenta 3 lados?", imagem:"../Imagens/Prova/PF_triangulo1.png", resp: ["Quadrado", "Círculo", "Trapézio", "Triângulo"] },
 
-{ titulo: "Qual valor falta para o resultado ser 180°??", imagem: "/Efeitos Sonoros/Especial imagem.jpg", resp: ["70°", "80°", "20°", "65°"]},
+    { titulo: "Qual valor falta para o resultado ser 180°?", imagem:"../Imagens/Prova/PF_triangulo2.png", resp: ["70°", "80°", "20°", "65°"] },
 
-{ titulo: "Qual dessas imagens tem um triângulo?", imagem: "/Efeitos Sonoros/Especial imagem.jpg", resp: ["Esfera", "Quadrado", "Borracha", "Melancia"]}
+    { titulo: "Qual dessas imagens tem um triângulo?", imagem:"../Imagens/Prova/PF_triangulo3.png", resp: ["Esfera", "Quadrado", "Borracha", "Melancia"] },
 
+    //Círculo
+
+    { titulo: "Qual dessas imagens é círculo?", imagem:"../Imagens/Prova/PF_circulo1.png", resp: ["Diamante", "Paralelogramo", "Cristal Vermelho", "Bola"] },
+
+    { titulo: "Qual desses objetos é um círculo?", imagem:"../Imagens/Prova/PF_circulo2.png", resp: ["Trapézio", "Coração", "Estrela", "Moeda"] },
+
+    { titulo: "Qual desses é um círculo?", imagem:"../Imagens/Prova/PF_circulo3.png", resp: ["Maçã", "Livros", "Moldura", "Roda Gigante"] },
+
+    //Trapézio
+
+    { titulo: "Qual é o vértice do trapézio?", imagem:"../Imagens/Prova/PF_trapezio1.png", resp: ["1", "2", "Nenhuma das opções", "3"] },
+
+    { titulo: "Qual dessas figuras é um trapézio?", imagem:"../Imagens/Prova/PF_trapezio2.png", resp: ["Relógio", "Presente", "Giz", "Desenho com rosto surpreso"] },
+
+    { titulo: "Qual é o vértice do trapézio?", imagem:"../Imagens/Prova/PF_trapezio3.png", resp: ["3", "Nenhuma das opções", "1", "2"] },
+
+    //Losango
+
+    { titulo: "Qual é o vértice do Losango?", imagem:"../Imagens/Prova/PF_losango1.png", resp: ["Nenhuma das opções", "3", "1", "2"] },
+
+    { titulo: "Qual é o face do Losango?", imagem:"../Imagens/Prova/PF_losango2.png", resp: ["2", "Nenhuma das opções", "3", "1"] },
+
+    { titulo: "Qual é a aresta do Losango?", imagem:"../Imagens/Prova/PF_losango3.png", resp: ["2", "3", "Nenhuma das opções", "1"] },
+
+    /*Médias*/
+    //Paralelogramo
+    { titulo: "Qual o perímetro do paralelogramo?", imagem:"../Imagens/Prova/PM_paralelogramo1.png", resp: ["18 CM", "12 CM", "14 CM", "24CM"] },
+
+    { titulo: "Qual a área do paralelogramo?", imagem:"../Imagens/Prova/PM_paralelogramo2.png", resp: ["33 CM²", "137 CM²", "39 CM²", "35 CM²"] },
+
+    //Retângulo
+
+    { titulo: "Qual o perímetro desse retângulo?", imagem:"../Imagens/Prova/PM_retangulo1.png", resp: ["20 CM²", "22 CM", "24 CM", "26 CM"] },
+
+    { titulo: "Qual a área desse retângulo?", imagem:"../Imagens/Prova/PM_retangulo2.png", resp: ["66 M²", "62 M²", "70 M²", "72 M²"] },
+
+    //Quadrado
+
+    { titulo: "Qual o perímetro desse quadrado?", imagem:"../Imagens/Prova/PM_quadrado1.png", resp: ["80 M", "50 M", "20 M", "40 M"] },
+
+    { titulo: "Qual a área desse quadrado?", imagem:"../Imagens/Prova/PM_quadrado2.png", resp: ["79 M²", "60 M²", "91 M²", "81 M²"] },
+
+    //Triângulo
+
+    { titulo: "Qual a área desse triângulo?", imagem:"../Imagens/Prova/PM_triangulo1.png", resp: ["40 CM²", "60 CM²", "90 CM²", "80 CM²"] },
+
+    { titulo: "Qual a área desse triângulo?", imagem:"../Imagens/Prova/PM_triangulo2.png", resp: ["10 M²", "20 M²", "15 M²", "25 M²"] },
+
+    //Círculo
+
+    { titulo: "Qual dos três círculos tem o maior perímetro?", imagem:"../Imagens/Prova/PM_circulo1.png", resp: ["O círculo com raio de 3 cm tem o maior perímetro", "Os três tem o mesmo perímetro", "O círculo com raio de 2 cm tem o maior perímetro", "O círculo com raio de 5 cm tem o maior perímetro"] },
+
+    { titulo: "Um círculo tem raio de 2 cm. Qual é a área do círculo?", imagem:"../Imagens/Prova/PM_circulo2.png", resp: ["A área do círculo é 13 cm²", "A área do círculo é 11 cm²", "A área do círculo é 15 cm²", "A área do círculo é 12 cm²"] },
+
+    //Trapézio
+
+    { titulo: "Base maior: 18 cm, base menor: 10 cm, altura: 7 cm. Qual é a área do trapézio?", imagem:"../Imagens/Prova/PM_trapezio1.png", resp: ["97 cm²", "100 cm²", "108 cm²", "98 cm²"] },
+
+    { titulo: "Dado um trapézio com a base maior de 12 cm, a base menor de 8 cm, e a altura de 5 cm. Qual é a área?", imagem:"../Imagens/Prova/PM_trapezio2.png", resp: ["80 cm²", "30 cm²", "90 cm²", "50 cm²"] },
+
+    //Losango
+
+    { titulo: "O losango tem lados de 8 cm. Qual é o perímetro desse losango?", imagem:"../Imagens/Prova/PM_losango1.png", resp: ["O perímetro é 40 cm.", "O perímetro é 38 cm.", "O perímetro é 36 cm.", "O perímetro é 32 cm."] },
+
+    { titulo: "Se o losango tem diagonais que medem 4 cm e 6 cm, qual é a área?", imagem:"../Imagens/Prova/PM_losango2.png", resp: ["A área é 6 cm².", "A área é 16 cm².", "A área é 14 cm².", "A área é 12 cm²."] },
+
+    /*Difíceis*/
+    { titulo: "Quantas faces tem o cubo?", imagem:"../Imagens/Prova/PD_quadrado1.png", resp: ["2", "5", "4", "6"]},
+
+    { titulo: "Qual é a face do cilindro?", imagem:"../Imagens/Prova/PD_circulo1.png", resp: ["1", "2", "NENHUMA DAS OPÇÕES", "3"]}
   ]
 }
 
@@ -39,47 +109,64 @@ const registro = [];
 
 for (let ex = 1; ex <= 10; ex++) {
   if (ex <= 5) {
-    let aleatorio = Math.floor(Math.random() * 6);
+    let aleatorio = Math.floor(Math.random() * 21);
     let loop = true;
 
     while (loop == true) {
       if (registro.includes(aleatorio) == true) {
-        aleatorio = Math.floor(Math.random() * 6);
+        aleatorio = Math.floor(Math.random() * 21);
       } else {
         registro.push(aleatorio);
         loop = false;
       }
     }
 
-    document.getElementById("ex" + ex).innerHTML = exercicios.ex[aleatorio].titulo;
-    document.getElementById("imagem_ex" + ex).src = exercicios.ex[aleatorio].imagem;
+    document.getElementById("ex"+ ex).innerHTML = exercicios.ex[aleatorio].titulo;
+    document.getElementById("imagem_ex"+ ex).src = exercicios.ex[aleatorio].imagem;
 
 
     for (let num = 1; num <= 4; num++) {
-      document.getElementById(ex + "." + num).innerHTML += exercicios.ex[aleatorio].resp[num - 1];
+      document.getElementById(ex + "."+ num).innerHTML += exercicios.ex[aleatorio].resp[num - 1];
     }
   } else if (ex <= 8) {
-    let aleatorio = Math.floor(Math.random() * 6) + 6;
+    let aleatorio = Math.floor(Math.random() * 14) + 21;
     let loop = true;
 
     while (loop == true) {
       if (registro.includes(aleatorio) == true) {
-        aleatorio = Math.floor(Math.random() * 6) + 6;
+        aleatorio = Math.floor(Math.random() * 14) + 21;
       } else {
         registro.push(aleatorio);
         loop = false;
       }
     }
 
-    document.getElementById("ex" + ex).innerHTML = exercicios.ex[aleatorio].titulo;
-    document.getElementById("imagem_ex" + ex).src = exercicios.ex[aleatorio].imagem;
+    document.getElementById("ex"+ ex).innerHTML = exercicios.ex[aleatorio].titulo;
+    document.getElementById("imagem_ex"+ ex).src = exercicios.ex[aleatorio].imagem;
 
     for (let num = 1; num <= 4; num++) {
-      document.getElementById(ex + "." + num).innerHTML += exercicios.ex[aleatorio].resp[num - 1];
+      document.getElementById(ex + "."+ num).innerHTML += exercicios.ex[aleatorio].resp[num - 1];
     }
 
   } else if (ex <= 10) {
+    let aleatorio = Math.floor(Math.random() * 2) + 35;
+    let loop = true;
 
+    while (loop == true) {
+      if (registro.includes(aleatorio) == true) {
+        aleatorio = Math.floor(Math.random() * 2) + 35;
+      } else {
+        registro.push(aleatorio);
+        loop = false;
+      }
+    }
+
+    document.getElementById("ex"+ ex).innerHTML = exercicios.ex[aleatorio].titulo;
+    document.getElementById("imagem_ex"+ ex).src = exercicios.ex[aleatorio].imagem;
+
+    for (let num = 1; num <= 4; num++) {
+      document.getElementById(ex + "."+ num).innerHTML += exercicios.ex[aleatorio].resp[num - 1];
+    }
   }
 }
 
@@ -109,9 +196,8 @@ function confirmar() {
   respostas.push(cortada);
 
   for (let num = 1; num <= 4; num++) {
-    document.getElementById(cortada + "confirmar").style.backgroundColor = '#dbd1a7';
     if (cortada + num != resposta_opcao) {
-    document.getElementById(cortada + num).style.background = '#dbd1a7';
+      document.getElementById(cortada + num).style.background = '#dbd1a7';
     }
   }
 
@@ -150,5 +236,5 @@ document.addEventListener('keydown', function (event) {
 });
 
 function resultado(elemento) {
-  alert("Você acertou " + acertos + "/" + elemento.id)
+  alert("Você acertou "+ acertos + "/"+ elemento.id)
 }
