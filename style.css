@@ -236,15 +236,20 @@ div.formas_inicio img:hover {
     border: solid 1px #23232e;
 }
 
+.container {
+    position: relative;  /* Referência para a .dica */
+    width: 100%;
+    margin-bottom: 20px; /* Espaço entre seções (opcional) */
+}
+
 .dica {
-    display: block; 
-    width: 15%; 
-    height: auto; 
-    float: right; 
-    padding-top: 2%; 
-    padding-right: 2%;
+    position: absolute; /* Tira do fluxo normal, não empurra o .center */
+    right: 2%;          /* Distância da direita */
+    top: 2%;            /* Distância do topo (ajuste conforme necessário) */
+    width: 15%;         /* Largura da dica */
+    height: auto;       /* Altura proporcional */
     cursor: pointer;
-    margin-bottom: 2%;
+    z-index: 10;        /* Garante que fique acima de outros elementos se necessário */
 }
 
 .modal {

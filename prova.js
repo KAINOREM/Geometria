@@ -58,45 +58,45 @@ const exercicios = {
 
     /*Médias*/
     //Paralelogramo
-    { titulo: "Qual o perímetro do paralelogramo?", imagem:"../Imagens/Prova/PM_paralelogramo1.png", resp: ["18 CM", "12 CM", "14 CM", "24CM"] },
+    { titulo: "Qual o perímetro do paralelogramo?", imagem:"../Imagens/Prova/PM_paralelogramo1.png", resp: ["18 CM", "12 CM", "14 CM", "24CM"], dica:"../Imagens/paralelogramo/dica_paralelogramo_m_perimetro.png" },
 
-    { titulo: "Qual a área do paralelogramo?", imagem:"../Imagens/Prova/PM_paralelogramo2.png", resp: ["33 CM²", "137 CM²", "39 CM²", "35 CM²"] },
+    { titulo: "Qual a área do paralelogramo?", imagem:"../Imagens/Prova/PM_paralelogramo2.png", resp: ["33 CM²", "137 CM²", "39 CM²", "35 CM²"], dica:"../Imagens/paralelogramo/dica_paralelogramo_m_area.png" },
 
     //Retângulo
 
-    { titulo: "Qual o perímetro desse retângulo?", imagem:"../Imagens/Prova/PM_retangulo1.png", resp: ["20 CM²", "22 CM", "24 CM", "26 CM"] },
+    { titulo: "Qual o perímetro desse retângulo?", imagem:"../Imagens/Prova/PM_retangulo1.png", resp: ["20 CM²", "22 CM", "24 CM", "26 CM"], dica:"../Imagens/Retangulo/dica_retangulo_m_perimetro.png" },
 
-    { titulo: "Qual a área desse retângulo?", imagem:"../Imagens/Prova/PM_retangulo2.png", resp: ["66 M²", "62 M²", "70 M²", "72 M²"] },
+    { titulo: "Qual a área desse retângulo?", imagem:"../Imagens/Prova/PM_retangulo2.png", resp: ["66 M²", "62 M²", "70 M²", "72 M²"], dica:"../Imagens/Retangulo/dica_retangulo_m_area.png" },
 
     //Quadrado
 
-    { titulo: "Qual o perímetro desse quadrado?", imagem:"../Imagens/Prova/PM_quadrado1.png", resp: ["80 M", "50 M", "20 M", "40 M"] },
+    { titulo: "Qual o perímetro desse quadrado?", imagem:"../Imagens/Prova/PM_quadrado1.png", resp: ["80 M", "50 M", "20 M", "40 M"], dica:"../Imagens/Quadrado/dica_quadrado_m_perimetro.png" },
 
-    { titulo: "Qual a área desse quadrado?", imagem:"../Imagens/Prova/PM_quadrado2.png", resp: ["79 M²", "60 M²", "91 M²", "81 M²"] },
+    { titulo: "Qual a área desse quadrado?", imagem:"../Imagens/Prova/PM_quadrado2.png", resp: ["79 M²", "60 M²", "91 M²", "81 M²"], dica:"../Imagens/Quadrado/dica_quadrado_m_area.png" },
 
     //Triângulo
 
-    { titulo: "Qual a área desse triângulo?", imagem:"../Imagens/Prova/PM_triangulo1.png", resp: ["40 CM²", "60 CM²", "90 CM²", "80 CM²"] },
+    { titulo: "Qual a área desse triângulo?", imagem:"../Imagens/Prova/PM_triangulo1.png", resp: ["40 CM²", "60 CM²", "90 CM²", "80 CM²"], dica:"../Imagens/Triangulo/dica_triangulo_m.png" },
 
-    { titulo: "Qual a área desse triângulo?", imagem:"../Imagens/Prova/PM_triangulo2.png", resp: ["10 M²", "20 M²", "15 M²", "25 M²"] },
+    { titulo: "Qual a área desse triângulo?", imagem:"../Imagens/Prova/PM_triangulo2.png", resp: ["10 M²", "20 M²", "15 M²", "25 M²"], dica:"../Imagens/Triangulo/dica_triangulo_m.png" },
 
     //Círculo
 
-    { titulo: "Qual dos três círculos tem o maior perímetro?", imagem:"../Imagens/Prova/PM_circulo1.png", resp: ["O círculo com raio de 3 cm tem o maior perímetro", "Os três tem o mesmo perímetro", "O círculo com raio de 2 cm tem o maior perímetro", "O círculo com raio de 5 cm tem o maior perímetro"] },
+    { titulo: "Qual dos três círculos tem o maior perímetro?", imagem:"../Imagens/Prova/PM_circulo1.png", resp: ["O círculo com raio de 3 cm tem o maior perímetro", "Os três tem o mesmo perímetro", "O círculo com raio de 2 cm tem o maior perímetro", "O círculo com raio de 5 cm tem o maior perímetro"], dica:"../Imagens/" },
 
-    { titulo: "Um círculo tem raio de 2 cm. Qual é a área do círculo?", imagem:"../Imagens/Prova/PM_circulo2.png", resp: ["A área do círculo é 13 cm²", "A área do círculo é 11 cm²", "A área do círculo é 15 cm²", "A área do círculo é 12 cm²"] },
+    { titulo: "Um círculo tem raio de 2 cm. Qual é a área do círculo?", imagem:"../Imagens/Prova/PM_circulo2.png", resp: ["A área do círculo é 13 cm²", "A área do círculo é 11 cm²", "A área do círculo é 15 cm²", "A área do círculo é 12 cm²"], dica:"../Imagens/" },
 
     //Trapézio
 
-    { titulo: "Base maior: 18 cm, base menor: 10 cm, altura: 7 cm. Qual é a área do trapézio?", imagem:"../Imagens/Prova/PM_trapezio1.png", resp: ["97 cm²", "100 cm²", "108 cm²", "98 cm²"] },
+    { titulo: "Base maior: 18 cm, base menor: 10 cm, altura: 7 cm. Qual é a área do trapézio?", imagem:"../Imagens/Prova/PM_trapezio1.png", resp: ["97 cm²", "100 cm²", "108 cm²", "98 cm²"], dica:"../Imagens/" },
 
-    { titulo: "Dado um trapézio com a base maior de 12 cm, a base menor de 8 cm, e a altura de 5 cm. Qual é a área?", imagem:"../Imagens/Prova/PM_trapezio2.png", resp: ["80 cm²", "30 cm²", "90 cm²", "50 cm²"] },
+    { titulo: "Dado um trapézio com a base maior de 12 cm, a base menor de 8 cm, e a altura de 5 cm. Qual é a área?", imagem:"../Imagens/Prova/PM_trapezio2.png", resp: ["80 cm²", "30 cm²", "90 cm²", "50 cm²"], dica:"../Imagens/" },
 
     //Losango
 
-    { titulo: "O losango tem lados de 8 cm. Qual é o perímetro desse losango?", imagem:"../Imagens/Prova/PM_losango1.png", resp: ["O perímetro é 40 cm.", "O perímetro é 38 cm.", "O perímetro é 36 cm.", "O perímetro é 32 cm."] },
+    { titulo: "O losango tem lados de 8 cm. Qual é o perímetro desse losango?", imagem:"../Imagens/Prova/PM_losango1.png", resp: ["O perímetro é 40 cm.", "O perímetro é 38 cm.", "O perímetro é 36 cm.", "O perímetro é 32 cm."], dica:"../Imagens/losango/dica_losango_m_perimetro.png" },
 
-    { titulo: "Se o losango tem diagonais que medem 4 cm e 6 cm, qual é a área?", imagem:"../Imagens/Prova/PM_losango2.png", resp: ["A área é 6 cm².", "A área é 16 cm².", "A área é 14 cm².", "A área é 12 cm²."] },
+    { titulo: "Se o losango tem diagonais que medem 4 cm e 6 cm, qual é a área?", imagem:"../Imagens/Prova/PM_losango2.png", resp: ["A área é 6 cm².", "A área é 16 cm².", "A área é 14 cm².", "A área é 12 cm²."], dica:"../Imagens/losango/dica_losango_m_area.png" },
 
     /*Difíceis*/
     { titulo: "Quantas faces tem o cubo?", imagem:"../Imagens/Prova/PD_quadrado1.png", resp: ["2", "5", "4", "6"]},
@@ -104,6 +104,11 @@ const exercicios = {
     { titulo: "Qual é a face do cilindro?", imagem:"../Imagens/Prova/PD_circulo1.png", resp: ["1", "2", "NENHUMA DAS OPÇÕES", "3"]}
   ]
 }
+
+const dicasConfig = {
+
+};
+
 
 const registro = [];
 
@@ -123,7 +128,9 @@ for (let ex = 1; ex <= 10; ex++) {
 
     document.getElementById("ex"+ ex).innerHTML = exercicios.ex[aleatorio].titulo;
     document.getElementById("imagem_ex"+ ex).src = exercicios.ex[aleatorio].imagem;
-
+    dicasConfig.push ({
+      ["dica_ex"+ ex]: exercicios.ex[aleatorio].dica,
+    })
 
     for (let num = 1; num <= 4; num++) {
       document.getElementById(ex + "."+ num).innerHTML += exercicios.ex[aleatorio].resp[num - 1];
@@ -143,6 +150,9 @@ for (let ex = 1; ex <= 10; ex++) {
 
     document.getElementById("ex"+ ex).innerHTML = exercicios.ex[aleatorio].titulo;
     document.getElementById("imagem_ex"+ ex).src = exercicios.ex[aleatorio].imagem;
+    dicasConfig.push ({
+      ["dica_ex"+ ex]: exercicios.ex[aleatorio].dica,
+    })
 
     for (let num = 1; num <= 4; num++) {
       document.getElementById(ex + "."+ num).innerHTML += exercicios.ex[aleatorio].resp[num - 1];
@@ -163,11 +173,18 @@ for (let ex = 1; ex <= 10; ex++) {
 
     document.getElementById("ex"+ ex).innerHTML = exercicios.ex[aleatorio].titulo;
     document.getElementById("imagem_ex"+ ex).src = exercicios.ex[aleatorio].imagem;
+    dicasConfig.push ({
+      ["dica_ex"+ ex]: exercicios.ex[aleatorio].dica,
+    })
 
     for (let num = 1; num <= 4; num++) {
       document.getElementById(ex + "."+ num).innerHTML += exercicios.ex[aleatorio].resp[num - 1];
     }
   }
+}
+
+for(let i = 0; i <=9; i ++) {
+  console.log(dicasConfig["dica_ex" + i])
 }
 
 let resposta_opcao = 0;
@@ -238,3 +255,14 @@ document.addEventListener('keydown', function (event) {
 function resultado(elemento) {
   alert("Você acertou "+ acertos + "/"+ elemento.id)
 }
+
+// Configurar eventos para todas as dicas
+document.querySelectorAll('.dica').forEach(dica => {
+    dica.addEventListener('click', function () {
+        const dicaId = this.id;
+        if (dicasConfig[dicaId]) {
+            imagemDica.src = dicasConfig[dicaId];
+            modalDica.style.display = "block";
+        }
+    });
+});
