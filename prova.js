@@ -105,9 +105,7 @@ const exercicios = {
   ]
 }
 
-const dicasConfig = {
-
-};
+const dicasConfig = [];
 
 
 const registro = [];
