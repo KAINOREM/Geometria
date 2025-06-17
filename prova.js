@@ -82,15 +82,15 @@ const exercicios = {
 
     //Círculo
 
-    { titulo: "Qual dos três círculos tem o maior perímetro?", imagem:"../Imagens/Prova/PM_circulo1.png", resp: ["O círculo com raio de 3 cm tem o maior perímetro", "Os três tem o mesmo perímetro", "O círculo com raio de 2 cm tem o maior perímetro", "O círculo com raio de 5 cm tem o maior perímetro"], dica:"../Imagens/" },
+    { titulo: "Qual dos três círculos tem o maior perímetro?", imagem:"../Imagens/Prova/PM_circulo1.png", resp: ["O círculo com raio de 3 cm tem o maior perímetro", "Os três tem o mesmo perímetro", "O círculo com raio de 2 cm tem o maior perímetro", "O círculo com raio de 5 cm tem o maior perímetro"], dica:"../Imagens/circulo/dica_circulo_m_perimetro" },
 
-    { titulo: "Um círculo tem raio de 2 cm. Qual é a área do círculo?", imagem:"../Imagens/Prova/PM_circulo2.png", resp: ["A área do círculo é 13 cm²", "A área do círculo é 11 cm²", "A área do círculo é 15 cm²", "A área do círculo é 12 cm²"], dica:"../Imagens/" },
+    { titulo: "Um círculo tem raio de 2 cm. Qual é a área do círculo?", imagem:"../Imagens/Prova/PM_circulo2.png", resp: ["A área do círculo é 13 cm²", "A área do círculo é 11 cm²", "A área do círculo é 15 cm²", "A área do círculo é 12 cm²"], dica:"../Imagens/circulo/dica_circulo_m_area" },
 
     //Trapézio
 
-    { titulo: "Base maior: 18 cm, base menor: 10 cm, altura: 7 cm. Qual é a área do trapézio?", imagem:"../Imagens/Prova/PM_trapezio1.png", resp: ["97 cm²", "100 cm²", "108 cm²", "98 cm²"], dica:"../Imagens/" },
+    { titulo: "Base maior: 18 cm, base menor: 10 cm, altura: 7 cm. Qual é a área do trapézio?", imagem:"../Imagens/Prova/PM_trapezio1.png", resp: ["97 cm²", "100 cm²", "108 cm²", "98 cm²"], dica:"../Imagens/trapezio/dica_trapezio_m_area.png" },
 
-    { titulo: "Dado um trapézio com a base maior de 12 cm, a base menor de 8 cm, e a altura de 5 cm. Qual é a área?", imagem:"../Imagens/Prova/PM_trapezio2.png", resp: ["80 cm²", "30 cm²", "90 cm²", "50 cm²"], dica:"../Imagens/" },
+    { titulo: "Dado um trapézio com a base maior de 12 cm, a base menor de 8 cm, e a altura de 5 cm. Qual é a área?", imagem:"../Imagens/Prova/PM_trapezio2.png", resp: ["80 cm²", "30 cm²", "90 cm²", "50 cm²"], dica:"../Imagens/trapezio/dica_trapezio_m_area.png" },
 
     //Losango
 
@@ -105,7 +105,18 @@ const exercicios = {
   ]
 }
 
-const dicasConfig = [];
+const dicasConfig = {};
+
+// Configurar eventos para todas as dicas
+document.querySelectorAll('.dica').forEach(dica => {
+    dica.addEventListener('click', function () {
+        const dicaId = this.id;
+        if (dicasConfig[dicaId]) {
+            imagemDica.src = dicasConfig[dicaId];
+            modalDica.style.display = "block";
+        }
+    });
+});
 
 
 const registro = [];
@@ -126,9 +137,6 @@ for (let ex = 1; ex <= 10; ex++) {
 
     document.getElementById("ex"+ ex).innerHTML = exercicios.ex[aleatorio].titulo;
     document.getElementById("imagem_ex"+ ex).src = exercicios.ex[aleatorio].imagem;
-    dicasConfig.push ({
-      ["dica_ex"+ ex]: exercicios.ex[aleatorio].dica,
-    })
 
     for (let num = 1; num <= 4; num++) {
       document.getElementById(ex + "."+ num).innerHTML += exercicios.ex[aleatorio].resp[num - 1];
@@ -148,9 +156,7 @@ for (let ex = 1; ex <= 10; ex++) {
 
     document.getElementById("ex"+ ex).innerHTML = exercicios.ex[aleatorio].titulo;
     document.getElementById("imagem_ex"+ ex).src = exercicios.ex[aleatorio].imagem;
-    dicasConfig.push ({
-      ["dica_ex"+ ex]: exercicios.ex[aleatorio].dica,
-    })
+    dicasConfig[`dica_ex${ex}`] = exercicios.ex[aleatorio].dica;
 
     for (let num = 1; num <= 4; num++) {
       document.getElementById(ex + "."+ num).innerHTML += exercicios.ex[aleatorio].resp[num - 1];
@@ -171,9 +177,6 @@ for (let ex = 1; ex <= 10; ex++) {
 
     document.getElementById("ex"+ ex).innerHTML = exercicios.ex[aleatorio].titulo;
     document.getElementById("imagem_ex"+ ex).src = exercicios.ex[aleatorio].imagem;
-    dicasConfig.push ({
-      ["dica_ex"+ ex]: exercicios.ex[aleatorio].dica,
-    })
 
     for (let num = 1; num <= 4; num++) {
       document.getElementById(ex + "."+ num).innerHTML += exercicios.ex[aleatorio].resp[num - 1];
@@ -181,7 +184,7 @@ for (let ex = 1; ex <= 10; ex++) {
   }
 }
 
-for(let i = 0; i <=9; i ++) {
+for(let i = 6; i <=8; i ++) {
   console.log(dicasConfig["dica_ex" + i])
 }
 
@@ -253,14 +256,3 @@ document.addEventListener('keydown', function (event) {
 function resultado(elemento) {
   alert("Você acertou "+ acertos + "/"+ elemento.id)
 }
-
-// Configurar eventos para todas as dicas
-document.querySelectorAll('.dica').forEach(dica => {
-    dica.addEventListener('click', function () {
-        const dicaId = this.id;
-        if (dicasConfig[dicaId]) {
-            imagemDica.src = dicasConfig[dicaId];
-            modalDica.style.display = "block";
-        }
-    });
-});

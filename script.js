@@ -23,6 +23,9 @@ const dicasConfig = {
     "losango_m_area": "/imagens/losango/dica_losango_m_area.png",
     "paralelogramo_m_perimetro": "/imagens/paralelogramo/dica_paralelogramo_m_perimetro.png",
     "paralelogramo_m_area": "/imagens/paralelogramo/dica_paralelogramo_m_area.png",
+    "trapezio_m": "/imagens/trapezio/dica_trapezio_m_area.png",
+    "circulo_m_perimetro": "/imagens/circulo/dica_circulo_m_perimetro.png",
+    "circulo_m_area": "/imagens/circulo/dica_circulo_m_area.png",
     // Adicione outras dicas aqui
 };
 
@@ -60,6 +63,7 @@ let sound1 = document.getElementById('audio1');
 let sound2 = document.getElementById('audio2');
 let sound3 = document.getElementById('audio3');
 let sound4 = document.getElementById('audio4');
+let sound5 = document.getElementById('audio5');
 
 // Sua função confirmar atualizada com modal
 function confirmar() {
@@ -99,6 +103,7 @@ function confirmar() {
         imagemResposta.src = "/Imagens/estaquasela_geral.png"
         textoResposta.textContent = "Tente novamente, você está quase lá!";
         modalResposta.style.display = "block";
+        sound5.play()
 
     } else {
         tituloResposta.textContent = "Atenção";
